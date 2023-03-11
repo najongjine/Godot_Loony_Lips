@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Loony_Lips.gd" type="Script" id=1]
 [ext_resource path="res://gfx/blackboard.jpg" type="Texture" id=2]
 [ext_resource path="res://gfx/Feltpen.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://gfx/blue_button11.png" type="Texture" id=4]
+[ext_resource path="res://gfx/blue_button12.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 25
@@ -10,6 +12,10 @@ font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 25
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 40
 font_data = ExtResource( 3 )
 
 [node name="Loony_Lips" type="Control"]
@@ -33,19 +39,42 @@ margin_bottom = -24.0
 alignment = 2
 
 [node name="DisplayText" type="Label" parent="VBoxContainer"]
-margin_top = 99.0
+margin_top = 79.0
 margin_right = 976.0
-margin_bottom = 499.0
+margin_bottom = 479.0
 rect_min_size = Vector2( 0, 400 )
 custom_fonts/font = SubResource( 1 )
 text = "Place Holder dfdfsdfssdfsd
 dfdfdf"
 autowrap = true
 
-[node name="PlayerText" type="LineEdit" parent="VBoxContainer"]
-margin_top = 503.0
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 483.0
 margin_right = 976.0
 margin_bottom = 552.0
+
+[node name="PlayerText" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
+margin_right = 830.0
+margin_bottom = 69.0
+size_flags_horizontal = 3
 custom_fonts/font = SubResource( 2 )
 
-[connection signal="text_entered" from="VBoxContainer/PlayerText" to="." method="_on_PlayerText_text_entered"]
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
+margin_left = 834.0
+margin_right = 903.0
+margin_bottom = 69.0
+rect_min_size = Vector2( 69, 69 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+expand = true
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_left = 907.0
+margin_right = 976.0
+margin_bottom = 69.0
+rect_min_size = Vector2( 69, 69 )
+custom_fonts/font = SubResource( 3 )
+text = "OK"
+
+[connection signal="text_entered" from="VBoxContainer/HBoxContainer/PlayerText" to="." method="_on_PlayerText_text_entered"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/TextureButton" to="." method="_on_TextureButton_pressed"]
