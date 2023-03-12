@@ -1,0 +1,12 @@
+2a60927148abd1d33b818b535e306557
+::res://::1678575256
+default_env.tres::Environment::-1::1678574485::0::1::::<><>::
+icon.png::CompressedTexture2D::4532458180695642492::1678574485::1678574522::1::::<><>::
+Loony_Lips.gd::GDScript::-1::1678574485::0::1::::<>Control<>::
+Loony_Lips.tscn::PackedScene::2586803756231694752::1678575191::0::1::::<><>::res://Loony_Lips.gd<>uid://db0qyrdnny81r<>uid://bkrtc1rpy7ecn<>uid://7hptqg4cfmwj<>uid://b2nn7qb1rpb8c
+README.md::TextFile::-1::1678574485::0::1::::<><>::
+::res://gfx/::1678574523
+blackboard.jpg::CompressedTexture2D::7282075567647191801::1678574485::1678574523::1::::<><>::
+blue_button11.png::CompressedTexture2D::2261439176634084621::1678574485::1678574522::1::::<><>::
+blue_button12.png::CompressedTexture2D::4309203682156710512::1678574485::1678574522::1::::<><>::
+Feltpen.ttf::FontFile::3124562128926458369::1678574485::1678574522::1::::<><>::
